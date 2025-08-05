@@ -4,4 +4,3 @@
   - name: Printing Hello from ansible
     ansible.builtin.debug:
       msg: "Hello from Ansible"
-    ansible.builtin.ping:
