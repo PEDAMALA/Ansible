@@ -1,6 +1,6 @@
 - name: DevSecOps
-  hosts: Local
-  connection: Local
+  hosts: local
+  connection: local
   vars:
     COURSE: DevSecOps
     DURATION: 5 weeks
