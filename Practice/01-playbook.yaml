@@ -1,4 +1,4 @@
-- name: Ping
+- name: PING
   host: web
   task:
   - name: ping the web server
