@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars:
-    COURSE: DevSecOps
-    DURATION: 5 weeks
-    TRAINER: John Doe
+    COURSE: "DevSecOps"
+    DURATION: "5 weeks"
+    TRAINER: "John Doe"
   tasks:
   - name: Display course information
     debug:
