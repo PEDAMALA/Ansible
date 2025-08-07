@@ -11,6 +11,7 @@
     #ansible.builtin.command: ls -ltr
     ansible.builtin.command: lsss -ltrssfff
     register: command_result
+    ignore_errors: true
 
   - name: print the output
     ansible.builtin.debug:
