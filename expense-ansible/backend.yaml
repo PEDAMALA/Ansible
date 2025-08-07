@@ -23,7 +23,7 @@
   - name: create app directory
     ansible.builtin.file:
       path: /app
-      state: directory
+      state: directory # if we miss this line, it will create a file instead of a directory
   
   - name: download backend code
     ansible.builtin.get_url:
@@ -34,7 +34,7 @@
     ansible.builtin.unarchive:
       src: /tmp/backend.zip
       dest: /app
-      remote_src: yes
+      remote_src: yes # remote_src: yes means the file is already on the remote server
   
   - name: Install dependencies
     community.general.npm:
@@ -59,7 +59,7 @@
       name: all
       login_user: root
       login_password: ExpenseApp@1
-      login_host: mysql.daws82s.online
+      login_host: mysql.psk135.tech
       target: /app/schema/backend.sql
 
   - name: daemon reload and restart service

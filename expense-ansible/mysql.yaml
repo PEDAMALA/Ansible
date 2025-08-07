@@ -7,10 +7,10 @@
   - name: Install MySQL libraries
     ansible.builtin.pip:
       name: "{{ item }}"
-      executable: pip3.9
+      executable: pip3.9 # it varies based on the python version
     loop:
-    - cryptography
-    - PyMySQL
+    - cryptography # it is required to encrypt the password
+    - PyMySQL # it is required to connect to mysql server from python
 
   - name: Install MySQL server
     ansible.builtin.package:
@@ -27,7 +27,7 @@
     community.mysql.mysql_info:
       login_user: root
       login_password: "{{ mysql_root_password }}"
-      login_host: mysql.daws82s.online
+      login_host: mysql.psk135.tech
     register: mysql_info
     ignore_errors: true
 
