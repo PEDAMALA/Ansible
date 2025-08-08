@@ -32,7 +32,7 @@
       msg: "Course info: {{ course | items2dict }}"
 
   - name: convert upper to lower
-    tags:
+    tags: #it is discussed on sesiion number 20 at 1 Hour 15 minuts.
     - uppertolower
     vars:
       name: "Sivakumar Reddy M"
