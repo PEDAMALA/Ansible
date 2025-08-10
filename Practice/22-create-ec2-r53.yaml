@@ -37,8 +37,8 @@
     ansible.builtin.debug:
      msg: "Instance {{ item.item }} has private IP: {{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
-    loop_control:
-     label: "{{ item.item }}"
+    # loop_control:
+    #  label: "{{ item.item }}"
 
 
   # - name: create private ip r53 records
