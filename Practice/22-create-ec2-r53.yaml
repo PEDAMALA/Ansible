@@ -43,7 +43,6 @@
   - name: check check sai
     ansible.builtin.debug:
       msg: "{{ item.instances[0] }}"
-    loop: "{{ ec2_info.results }}"
 
 
   # - name: create private ip r53 records
