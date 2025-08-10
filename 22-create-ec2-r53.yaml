@@ -38,6 +38,13 @@
       msg: "{{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
 
+  # - name: Print private IP addresses with instance names
+  #   ansible.builtin.debug:
+  #    msg: "Instance {{ item.item }} has private IP: {{ item.instances[0].private_ip_address }}"
+  #   loop: "{{ ec2_info.results }}"
+  #   loop_control:
+  #    label: "{{ item.item }}"
+
   - name: create private ip r53 records
     amazon.aws.route53:
       state: present
