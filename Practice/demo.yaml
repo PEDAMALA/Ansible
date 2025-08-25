@@ -1,0 +1,7 @@
+- name: Demo play
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Ping all running mysql instances
+      ansible.builtin.ping:
